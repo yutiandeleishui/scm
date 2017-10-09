@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="scm-app" />
+        <module name="scm-common" />
+        <module name="scm-mock" />
+        <module name="scm-repertory" />
+        <module name="scm-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="scm" target="1.8" />
+      <module name="scm-app" target="1.8" />
+      <module name="scm-common" target="1.8" />
+      <module name="scm-mock" target="1.8" />
+      <module name="scm-repertory" target="1.8" />
+      <module name="scm-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

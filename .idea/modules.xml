@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/scm.iml" filepath="$PROJECT_DIR$/scm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scm-app/scm-app.iml" filepath="$PROJECT_DIR$/scm-app/scm-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scm-common/scm-common.iml" filepath="$PROJECT_DIR$/scm-common/scm-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scm-mock/scm-mock.iml" filepath="$PROJECT_DIR$/scm-mock/scm-mock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scm-repertory/scm-repertory.iml" filepath="$PROJECT_DIR$/scm-repertory/scm-repertory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scm-service/scm-service.iml" filepath="$PROJECT_DIR$/scm-service/scm-service.iml" />
+    </modules>
+  </component>
+</project>
