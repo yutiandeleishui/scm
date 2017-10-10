@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+                PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+                "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<properties resource="mbg.properties" />
+<!--数据库驱动，必须要检查是否存在-->
+<classPathEntry location="D:/apache-maven-3.5.0/Repository/mysql/mysql-connector-java/5.1.41/mysql-connector-java-5.1.41.jar" />
+
+<context id="MyBatis3" targetRuntime="MyBatis3" defaultModelType="flat">
+
+    <property name="javaFileEncoding" value="UTF-8" />
+
+    <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin" />
+    <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+    <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+    <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+
+    <commentGenerator type="CustomCommentGenerator">
+        <property name="suppressChineseAllComments" value="false" />
+        <property name="suppressAllComments" value="true" />
+        <property name="suppressDate" value="true" />
+    </commentGenerator>
+
+    <!--数据库连接-->
+    <jdbcConnection driverClass="${jdbc.driver}"
+                    connectionURL="${jdbc.url}"
+                    userId="${jdbc.username}"
+                    password="${jdbc.password}" />
+
+    <!--生成model文件类名 项目地址-->
+    <javaModelGenerator targetPackage="${modelPackage}" targetProject="${modelprojectName}" />
+
+    <!--生成映射文件存放位置-->
+    <sqlMapGenerator targetPackage="${mapperXmlPackage}" targetProject="${mapperprojectName}" />
+
+    <!--生成Dao类放位置-->
+    <javaClientGenerator targetPackage="${mapperPackage}" targetProject="${projectName}" type="XMLMAPPER"/>
+
+
+    <!--生成对应表及类名-->
+    <table tableName="userinfo" domainObjectName="Userinfo">
+    <columnOverride column="id" property="id" />
+    <columnOverride column="sex" property="sex" />
+    <columnOverride column="age" property="age" />
+    <columnOverride column="reason" property="reason" />
+    <columnOverride column="Decp" property="Decp" />
+    </table>
+
+    <!--<table tableName="Cashier" domainObjectName="Cashier">-->
+        <!--<columnOverride column="id" property="id" />-->
+        <!--<columnOverride column="transferid" property="transferId" />-->
+        <!--<columnOverride column="transferreddatetime" property="transferredDateTime" />-->
+        <!--<columnOverride column="reason" property="reason" />-->
+        <!--<columnOverride column="is_deleted" property="deleted" />-->
+    <!--</table>-->
+
+    <!--<table tableName="Paypalextract" domainObjectName="PayPalExtract">-->
+        <!--<columnOverride column="id" property="id" />-->
+        <!--<columnOverride column="transferid" property="transferId" />-->
+        <!--<columnOverride column="isoverseas" property="overseas" />-->
+        <!--<columnOverride column="currency" property="currency"  />-->
+        <!--<columnOverride column="is_deleted" property="deleted" />-->
+    <!--</table>-->
+
+    <!--<table tableName="Paypaloverseasextract" domainObjectName="PayPalOverseasExtract">-->
+        <!--<columnOverride column="id" property="id" />-->
+        <!--<columnOverride column="transferid" property="transferId" />-->
+        <!--<columnOverride column="transferreddatetime" property="transferredDateTime" />-->
+        <!--<columnOverride column="transferredamount" property="transferredAmount" />-->
+        <!--<columnOverride column="exchange" property="exchange" />-->
+        <!--<columnOverride column="fee" property="fee" />-->
+        <!--<columnOverride column="is_deleted" property="deleted" />-->
+    <!--</table>-->
+
+    <!--<table tableName="Transferinfo" domainObjectName="TransferInfo">-->
+        <!--<columnOverride column="transferid" property="transferId" />-->
+        <!--<columnOverride column="billno" property="billNo" />-->
+        <!--<columnOverride column="transfertype" property="transferType" />-->
+        <!--<columnOverride column="status" property="status"  />-->
+        <!--<columnOverride column="paycardholder" property="payCardholder" />-->
+        <!--<columnOverride column="paycardno" property="payCardNo" />-->
+        <!--<columnOverride column="paycardcompanyname" property="payCardCompanyName" />-->
+        <!--<columnOverride column="payeecardholder" property="payeeCardholder" />-->
+        <!--<columnOverride column="payeecardno" property="payeeCardNo" />-->
+        <!--<columnOverride column="payeecardcompanyname" property="payeeCardCompanyName" />-->
+        <!--<columnOverride column="paycurrency" property="payCurrency"/>-->
+        <!--<columnOverride column="payamount" property="payAmount" />-->
+        <!--<columnOverride column="paycashiername" property="payCashierName" />-->
+        <!--<columnOverride column="payeecashiername" property="payeeCashierName" />-->
+        <!--<columnOverride column="paydate" property="payDate" />-->
+        <!--<columnOverride column="transferredcurrency" property="transferredCurrency" />-->
+        <!--<columnOverride column="transferredamount" property="transferredAmount" />-->
+        <!--<columnOverride column="payfee" property="payFee" />-->
+        <!--<columnOverride column="receiveamount" property="receiveAmount" />-->
+        <!--<columnOverride column="receivefee" property="receiveFee" />-->
+        <!--<columnOverride column="transferreddatetime" property="transferredDateTime" />-->
+        <!--<columnOverride column="remark" property="remark" />-->
+        <!--<columnOverride column="applyuserid" property="applyUserId" />-->
+        <!--<columnOverride column="applyusername" property="applyUsername" />-->
+        <!--<columnOverride column="applydate" property="applyDate" />-->
+        <!--<columnOverride column="is_deleted" property="deleted" />-->
+    <!--</table>-->
+</context>
+
+</generatorConfiguration>
